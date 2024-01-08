@@ -10,10 +10,10 @@
   display: block;
   text-align: right;
 }
-.img-matrix {
+.header__img-matrix {
   width: 100%;
 }
-.header .more-details-link {
+.header__more-details-link {
   font-family: fantasy, cursive;
 }
 
@@ -27,24 +27,28 @@
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.task__title,
+.task__input,
+.new-tasks__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.input-wrapper {
+.new-tasks__input-wrapper {
   display: flex;
 }
-#incompleteTasks,
+.tasks-list,
 #completed-tasks {
   margin: 0;
   padding: 0px;
 }
-.item, 
-.title {
+.task, 
+.title-list {
   list-style: none;
 }
-.task,
+.task__title,
+.task__input,
+.new-tasks__input,
 .btn {
   outline: none;
 }
@@ -61,8 +65,8 @@
   color: #3a3a3a;
 }
 /* Heading */
-.title,
-.title-new-task {
+.title-list,
+.new-tasks__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -71,8 +75,8 @@
   margin: 0;
   text-transform: uppercase;
 }
-#new-task,
-.input-disabled {
+.new-task,
+.task__input_disabled {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -84,21 +88,21 @@
   font-family: Lato, sans-serif;
   color: #888;
 }
-#new-task:focus,
-.input-disabled:focus {
+.new-task:focus,
+.task__input_disabled:focus {
   color: #333;
 }
 /* New Task */
-.title-new-task {
+.new-tasks__title {
   display: block;
   margin: 0 0 20px;
 }
-#new-task {
+.new-task {
   width: 318px;
 }
 
 /* Task list */
-.item {
+.task {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -107,46 +111,46 @@
   justify-content: space-between;
   align-items: center;
 }
-.item > * {
+.task > * {
   vertical-align: middle;
 }
 
-.checkbox {
+.task__checkbox {
   margin: 0 10px;
 }
-.title-incompleted,
-.title-completed,
-.title-disabled {
+.task__title_incompleted,
+.task__title_completed,
+.task__title_disabled {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.input-disabled {
+.task__input_disabled {
   width: 226px;
 }
-.delete-icon {
+.btn__delete-icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete-icon:hover {
+.btn__delete-icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.title-completed {
+.task__title_completed {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.title-disabled,
-.input-disabled {
+.task__title_disabled,
+.task__input_disabled {
   display: none; 
 }
 
-.edit-task {
+.task-edit {
   display: inline-block;
   width: 224px;
 }
